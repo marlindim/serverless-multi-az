@@ -10,10 +10,6 @@ It includes:
 
 ---
 
-## 🏗️ Architecture
-![Architecture Diagram](./architecture-diagram.png)  
-*(Add your Draw.io or Lucidchart diagram here)*
-
 **Key Components:**
 1. **VPC & Networking**
    - Multi-AZ setup with public/private subnets.
