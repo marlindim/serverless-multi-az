@@ -3,37 +3,29 @@ Serverless Multi-AZ Architecture on AWS
 This project demonstrates how to design and deploy a highly available, fault-tolerant architecture using AWS with Terraform.
 It covers:
 
-Multi-AZ VPC and subnets
+1.Multi-AZ VPC and subnets
 
-EC2 instances behind Auto Scaling and Load Balancer
+2.EC2 instances behind Auto Scaling and Load Balancer
 
-Serverless components (AWS Lambda + DynamoDB)
+3.Serverless components (AWS Lambda + DynamoDB)
 
-Architecture Overview
+4.Architecture Overview
 
-VPC: Created with public subnets across multiple Availability Zones.
+5.VPC: Created with public subnets across multiple Availability Zones.
 
-Security Groups: Allow HTTP (80) and SSH (22) access.
+6.Security Groups: Allow HTTP (80) and SSH (22) access.
 
-EC2 Instances: Deployed with Apache installed, serving a static page.
+7.EC2 Instances: Deployed with Apache installed, serving a static page.
 
-Auto Scaling Group (ASG): Automatically scales EC2 instances across AZs.
+8.Auto Scaling Group (ASG): Automatically scales EC2 instances across AZs.
 
-Load Balancer (ALB): Distributes traffic across EC2 instances.
+9.Load Balancer (ALB): Distributes traffic across EC2 instances.
 
-Serverless Component: AWS Lambda triggered by S3 bucket upload, storing data in DynamoDB.
-
-
-Project Structure
-serverless-multi-az/
-├── main.tf                # Terraform configuration (VPC, Subnets, EC2, ASG, ALB, Lambda, DynamoDB)
-├── variables.tf           # Variables 
-├── outputs.tf             # Outputs of the infrastructure
-├── lambda_function.py     # Sample Lambda code
-└── README.md
+10.Serverless Component: AWS Lambda triggered by S3 bucket upload, storing data in DynamoDB.
 
 
-Prerequisites
+
+Prerequisites:
 
 Terraform v1.x+ installed
 
@@ -42,7 +34,7 @@ AWS CLI configured with credentials and correct region
 A public key at ~/.ssh/id_rsa.pub for EC2 access (or update the path in main.tf)
 
 
-Deployment
+Deployment:
 
 1.Initialize Terraform:
 terraform init
@@ -65,8 +57,3 @@ To destroy all the resources and avoid ongoing AWS costs:
 terraform destroy
 
 
-
-Author
-
-Okeke Austine Makuochukwu
-Junior Linux System Administrator | Aspiring Cybersecurity Engineer
